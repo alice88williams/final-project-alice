@@ -444,30 +444,32 @@ img {
 }
 
 .site-nav {
-  position: absolute;
-  top: 0px;
-  left: 200px;
   margin: 0;
   width: 100%;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 300;
   padding: 30px 0 10px 0;
   display: none;
 }
 
 .site-nav ul, li {
-  display: inline;
-  margin-left: 30px;
+  display: block;
+  margin: 0 0 10px 30px;
 }
 
 .site-nav a {
   color: #fff;
 }
 
-.position-left {
+.site-nav a:hover {
+  color: #5298AF;
+}
+
+.nav-icon {
   position: relative;
   right: 150px;
+  display: none;
 }
 
 .btn3 {
@@ -543,7 +545,7 @@ img {
 }
 
 .nav-container {
-  max-width: 960px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -592,42 +594,17 @@ section h3 {
 
 .site-header h1 {
   color: #fff;
-  margin: 0 150px 0 0;
+  margin: 0;
   padding: 20px 20px 20px 0;
   font-family: "Lobster Two", cursive;
   font-weight: 700;
   font-size: 2em;
-  text-align: right;
+  text-align: left;
 }
 
-.site-content,
-.site-footer {
+.site-content {
   max-width: 960px;
   margin: 0 auto;
-}
-
-.site-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: right;
-}
-
-.section-footer {
-  position: absolute;
-  right: 300px;
-  text-align: right;
-}
-
-.section-footer p {
-  font-size: 14px;
-  color: #fff;
-}
-
-.site-footer p {
-  color: #fff;
 }
 
 .site-icons {
@@ -828,6 +805,10 @@ p a {
   padding: 10px 0 20px 0;
 }
 
+.contact-icons ul, li {
+  display: inline-block;
+}
+
 .contact-icons li {
   margin-left: 0;
   margin-right: 10px;
@@ -976,6 +957,19 @@ p {
   body {
     background-image: url("../imgs/beach.jpg");
   }
+
+  .site-header h1 {
+    display: none;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  .site-welcome {
+    background-color: rgba(82, 152, 175, 0.4);
+    margin-top: 150px;
+  }
 }
 @media screen and (max-width: 700px) {
   .site-icons,
@@ -992,7 +986,7 @@ p {
     padding: 30px 0;
   }
 
-  .position-left {
+  .nav-icon {
     position: relative;
     right: 200px;
   }

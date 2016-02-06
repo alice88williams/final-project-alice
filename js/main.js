@@ -116,14 +116,6 @@ $(document).ready(function(){
             	$('#site-logo').removeClass("hidden").fadeIn("slow").addClass("visible");
         }
 
-        // if ( $('#title').hasClass("visible")) {
-
-        //     	$('#title').removeClass("visible").fadeOut("slow").addClass("hidden");
-
-        // 	} else {
-
-        //      	$('#title').removeClass("hidden").fadeIn("slow").addClass("visible");
-        // }
     });
 
 });
