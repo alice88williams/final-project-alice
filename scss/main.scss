@@ -1,0 +1,567 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+*/
+
+@import "normalize";
+
+/******************************************
+/* COLOURS
+/*******************************************/
+
+/* add a list of colours used in the project */
+
+$yellow: #FFEE8D;
+$darkgrey: #4A4A4A;
+$body-font: 'Raleway', sans-serif;
+$title-font: 'Lobster Two', cursive;
+$subtitle-font: 'Roboto Slab', serif;
+
+/******************************************
+/* SENSIBLE DEFAULTS                   
+/*******************************************/
+
+* {
+     box-sizing: border-box;
+}
+img {
+     max-width: 100%;
+}
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+/* add type styles here */
+
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+// HAMBURGER
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.site-logo {
+     position: absolute;
+     width: 50px;
+     height: 50px;
+     top: 10px;
+     left: 25px;
+     font-family: $body-font;
+     font-size: 18px;
+     color: #fff;
+}
+.site-nav {
+     position:absolute;
+     top: 0px;
+     left: 200px;
+     margin: 0;
+     width: 100%;
+     font-family: $body-font;
+     font-size: 18px;
+     font-weight: 100;
+     padding: 30px 0 10px 0;
+     display: none;
+}
+.site-nav ul, li {
+     display: inline;
+     margin-left: 30px;
+}
+.site-nav a {
+     color: #fff;
+}
+.position-left {
+     position: relative;
+     right: 150px;
+}
+.btn3 {
+     position: absolute;
+     width: 100px;
+     height: 100px;
+     top: 0;
+     left: 200px;
+     transition-duration: 0.5s;
+     background-color: $darkgrey;
+     padding: 20px;
+}
+.btn3 .icon {
+     transition-duration: 0.5s;
+     position: absolute;
+     height: 0px;
+     width: 50px;
+     top: 50px;
+     left: 25px;
+     background-color: #fff;
+}
+.btn3 .icon:before {
+     transition-duration: 0.5s;
+     position: absolute;
+     width: 50px;
+     height: 4px;
+     background-color: #fff;
+     content: "";
+     top: 15px;
+}
+.btn3 .icon:after {
+     transition-duration: 0.5s;
+     position: absolute;
+     width: 50px;
+     height: 4px;
+     background-color: #fff;
+     content: "";
+     top: 30px;
+}
+.btn3.open .icon {
+     transition-duration: 0.5s;
+}
+.btn3.open .icon:before {
+     transform: rotateZ(135deg) scaleX(1) translate(5px, -5px);
+}
+.btn3.open .icon:after {
+     transform: rotateZ(-135deg) scaleX(1) translate(6px, 6px);
+}
+.btn3:hover {
+     cursor: pointer;
+}
+
+// HAMBURGER ENDS
+
+.site-header {
+     background-color: rgba(60,60,60,0.7);
+}
+
+.site-bkgrd {
+     margin-top: 4em;
+}
+
+.nav-container {
+     max-width: 960px;
+     margin: 0 auto;
+}
+.about-me,
+.my-work,
+.my-cv,
+.contact-me {
+     max-width: 640px;
+     margin: 0 auto;
+     display: none;
+     background-color: #fff;
+     padding: 10px 30px;
+     box-shadow: 0px 0px 5px 0px rgba(117,116,117,0.67);
+}
+.site-welcome {
+     margin: auto;
+     margin-top:80px; 
+     max-width: 300px;
+     border: 3px solid #fff;
+     padding: 10px;
+     font-family: $body-font;
+     font-size: 3em;
+     text-align: center;
+     color: #fff;
+     background-color: rgba(60,60,60,0.4);
+}
+section h1 {
+  font-family: $body-font;
+  font-size: 70px;
+  color: $darkgrey;
+  letter-spacing: -0.12em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+section h3 {
+  font-family: $body-font;
+  font-size: 20px;
+  color: $darkgrey;
+  letter-spacing: -0.08em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.site-header h1 {
+  color: #fff;
+  margin: 0 150px 0 0;
+  padding: 20px 20px 20px 0;
+  font-family: $title-font;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: right;
+}
+.site-content, 
+.site-footer {
+     max-width: 960px;
+     margin: 0 auto;
+}
+.site-footer {
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     padding: 1rem;
+     text-align: right;
+}
+.section-footer {
+     position: absolute;
+     right: 300px;
+     text-align: right;
+}
+.section-footer p {
+     font-size: 14px;
+     color: #fff;
+}
+.site-footer p {
+     color: #fff;
+}
+.site-icons {
+     max-width: 510px;
+     margin: 0 auto;
+     margin-bottom: 20px;
+}
+.icon img {
+     max-width: 40px;
+     padding-top: 5px;
+}
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;     
+}
+.img-list li img {
+  margin-top: 15px;
+}
+ul.img-list li {
+  display: inline-block;
+  height: 100px;
+  margin: 0 1.5em 1.5em 0;
+  position: relative;
+  width: 100px;
+  background-color: $darkgrey;
+  border-radius:50%;
+}
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  letter-spacing: -0.08em;
+  color: #fff;
+  font-family: $body-font;
+  display: table;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100px;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+.about-image {
+  background-color: #fff;
+  padding: 6px 0 7px 10px;
+  float:right;  
+  clear:both;
+  box-shadow: 0px 0px 5px 0px rgba(117,116,117,0.67);
+  margin: 20px -80px 10px 10px ;
+}
+.about-image:before {
+  display:block;
+  float: right;
+}
+.about-image img {
+  max-width: 95%;
+}
+.projects-image {
+  width: 350px;
+  background-color: #fff;
+  padding: 6px 0 7px 10px;
+  float: right;
+  clear: both;
+  box-shadow: 0px 0px 5px 0px rgba(117, 116, 117, 0.67);
+  margin: 0px -80px 10px 10px;
+}
+.projects-image:before {
+  display: block;
+  float: right;
+}
+.projects-image img {
+  max-width: 97%;
+}
+.projects-imageleft {
+  width: 350px;
+  background-color: #fff;
+  padding: 6px 0 7px 10px;
+  float: left;
+  clear: both;
+  box-shadow: 0px 0px 5px 0px rgba(117, 116, 117, 0.67);
+  margin: 10px 10px 10px -80px;
+}
+.projects-imageleft:before {
+  display: block;
+  float: left;
+}
+.projects-imageleft img {
+  max-width: 97%;
+}
+.mobile-gallery {
+  display: none;
+}
+section p {
+  margin-top: 20px;
+  line-height: 1.5rem;
+}
+.skillbar {
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:100%;
+  background:#eee;
+  height:35px;
+  border-radius:3px;
+  transition:0.4s linear;
+  transition-property:width, background-color;
+}
+
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:0;
+  width:110px;
+  font-family: $body-font;
+  font-weight:bold;
+  font-size:13px;
+  color:#ffffff;
+  background:#5298AF;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 10px;
+  font-family: $body-font;
+  height:35px;
+  line-height:35px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+  height:35px;
+  width:0px;
+  background:#73C6C6;
+  border-radius:3px;
+}
+
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:35px;
+  line-height:35px;
+  color:#ffffff;
+  font-family: $body-font;
+  color:rgba(0, 0, 0, 0.4);
+}
+.my-cv p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+p a {
+  text-decoration: none;
+  color: #5298AF;
+  font-weight: 700;
+}
+
+// CONTACT PAGE
+// .large {
+//   margin-top: 30px;
+//   color: rgba(60,60,60,0.4);
+//   font-family: $body-font;
+//   font-size: 43px;
+// }
+// .large a {
+//   text-decoration: none;
+//   color: rgba(60,60,60,0.4);
+// }
+.contact-icons {
+  margin: 0;
+  padding: 10px 0 20px 0;
+}
+.contact-icons li {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.linkedin img {
+  max-width: 70px;
+  -webkit-filter: grayscale(100%) opacity(.7);
+  filter: grayscale(100%) opacity(.7);
+}
+.linkedin img:hover  {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  animation-name: pulse;
+  animation-duration: 0.5s;
+}
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+.gmail img {
+  max-width: 90px;
+  -webkit-filter: grayscale(100%) opacity(.7);
+  filter: grayscale(100%) opacity(.7);
+}
+.gmail img:hover  {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  animation-name: pulse;
+  animation-duration: 0.5s;
+}
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media screen and (max-width: 750px) {
+  .about-me,
+  .my-work,
+  .my-cv,
+  .contact-me {
+     max-width: 500px;
+     margin-top: 80px;
+     display: none;
+     background-color: #fff;
+     padding: 10px 30px;
+     box-shadow: 0px 0px 5px 0px rgba(117,116,117,0.67);
+  }
+  .about-image {
+    width: 200px;
+    margin: 20px -45px 10px 10px ;
+  }
+  section h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .site-icons,
+  .site-header h1 { 
+    display:none; 
+  }
+  .site-nav {
+    position:absolute;
+    top: 0px;
+    left: 20px;
+    background-color: rgba(60,60,60,0.7);
+    width: 100%;
+    padding:30px 0;
+  }
+  .position-left {
+     position:relative;
+     right: 200px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .about-me,
+  .my-work,
+  .my-cv,
+  .contact-me {
+     max-width: 400px;
+     margin-top: 80px;
+     display: none;
+     background-color: #fff;
+     padding: 10px 30px;
+     box-shadow: 0px 0px 5px 0px rgba(117,116,117,0.67);
+  }
+  .projects-image,
+  .projects-imageleft {
+    display: none;
+  }
+  .mobile-gallery {
+    display: block;
+  }
+  .about-image {
+    width: 150px;
+    margin: 20px -45px 10px 10px ;
+  }
+}
+@media screen and (max-width: 580px) {
+  .site-nav {
+    position:absolute;
+    background-color: rgba(60,60,60,0.7);
+    width: 100%;
+    padding: 100px 0 0 0;
+  }
+  .site-nav li {
+    display: block;
+  }
+}
+@media screen and (max-width: 440px) {
+  .about-image {
+    width: 100px;
+    margin: 20px -20px 10px 10px ;
+    padding: 0 0 0 5px;
+  }
+}
+
+/******************************************
+/* HELPER CLASSES
+/*******************************************/
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+     content: " ";
+     display: table;
+}
+.clearfix:after {
+     clear:both;
+}
+
+.is-hidden {
+     display: none;
+}
+.is-visible {
+     display: block;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+body {
+     background-image: url("../imgs/paddling.jpg");
+     background-size: 100%;       
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+a {
+     text-decoration: none;
+}
+
+p {
+     font-family: $body-font;
+     color: $darkgrey;
+     font-size: 16px;
+}
