@@ -439,6 +439,49 @@ p a {
   100% {transform: scale(1);}
 }
 
+
+
+/******************************************
+/* HELPER CLASSES
+/*******************************************/
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+     content: " ";
+     display: table;
+}
+.clearfix:after {
+     clear:both;
+}
+
+.is-hidden {
+     display: none;
+}
+.is-visible {
+     display: block;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+body {
+     background-image: url("../imgs/paddling.jpg");
+     background-size: cover;       
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+a {
+     text-decoration: none;
+}
+
+p {
+     font-family: $body-font;
+     color: $darkgrey;
+     font-size: 16px;
+}
 /******************************************
 /* MEDIA QUERIES
 /*******************************************/
@@ -461,6 +504,9 @@ p a {
   }
   section h1 {
     font-size: 50px;
+  }
+  body {
+    background-image: url("../imgs/beach.jpg");
   }
 }
 @media screen and (max-width: 700px) {
@@ -524,44 +570,6 @@ p a {
   }
 }
 
-/******************************************
-/* HELPER CLASSES
-/*******************************************/
-
-/* Clearfix */
-.clearfix:before,
-.clearfix:after {
-     content: " ";
-     display: table;
-}
-.clearfix:after {
-     clear:both;
-}
-
-.is-hidden {
-     display: none;
-}
-.is-visible {
-     display: block;
-}
 
 
-/******************************************
-/* ADDITIONAL STYLES                   
-/*******************************************/
 
-body {
-     background-image: url("../imgs/paddling.jpg");
-     background-size: 100%;       
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-}
-a {
-     text-decoration: none;
-}
-
-p {
-     font-family: $body-font;
-     color: $darkgrey;
-     font-size: 16px;
-}

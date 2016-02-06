@@ -907,6 +907,48 @@ p a {
   }
 }
 /******************************************
+/* HELPER CLASSES
+/*******************************************/
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-visible {
+  display: block;
+}
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+body {
+  background-image: url("../imgs/paddling.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  color: #4A4A4A;
+  font-size: 16px;
+}
+
+/******************************************
 /* MEDIA QUERIES
 /*******************************************/
 @media screen and (max-width: 750px) {
@@ -929,6 +971,10 @@ p a {
 
   section h1 {
     font-size: 50px;
+  }
+
+  body {
+    background-image: url("../imgs/beach.jpg");
   }
 }
 @media screen and (max-width: 700px) {
@@ -996,47 +1042,6 @@ p a {
     margin: 20px -20px 10px 10px;
     padding: 0 0 0 5px;
   }
-}
-/******************************************
-/* HELPER CLASSES
-/*******************************************/
-/* Clearfix */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.is-hidden {
-  display: none;
-}
-
-.is-visible {
-  display: block;
-}
-
-/******************************************
-/* ADDITIONAL STYLES                   
-/*******************************************/
-body {
-  background-image: url("../imgs/paddling.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-a {
-  text-decoration: none;
-}
-
-p {
-  font-family: "Raleway", sans-serif;
-  color: #4A4A4A;
-  font-size: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
